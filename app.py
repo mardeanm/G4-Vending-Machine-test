@@ -27,13 +27,16 @@ class Cart:
     def __init__(self):
         # Each item in the cart is stored as {item_id: {'quantity': quantity, 'name': name, 'price': price}}
         self.items = {}
+        self.cart_count=0
 
     def add_item(self, item_id, quantity, name, price):
         # Add or update an item in the cart
         if item_id in self.items:
             self.items[item_id]['quantity'] += quantity
+            self.cart_count += quantity
         else:
             self.items[item_id] = {'quantity': quantity, 'name': name, 'price': price}
+            self.cart_count+=quantity
 
     def calculate_total(self):
         # Calculate the total cost of items in the cart
@@ -52,6 +55,8 @@ class Cart:
     def clear_cart(self):
         # Clear all items in the cart
         self.items.clear()
+        self.cart_count=0
+
 
 def decrease_inventory(item_id, quantity):
     # Decrease the inventory quantity after dispensing an item
@@ -73,7 +78,10 @@ def add_to_cart():
 
     cart.add_item(item_id, quantity, name, price)
     return jsonify(success=True)
-
+@app.route('/cart_count')
+def get_cart_count():
+    # Assuming `cart` is your global Cart instance
+    return jsonify(cart_count=cart.cart_count)
 @app.route('/pay_with_cash', methods=['POST'])
 def pay_with_cash():
     # Process cash payment
@@ -131,7 +139,8 @@ def get_items():
     items = {item[0]: {'name': item[1], 'price': item[2]} for item in cur.fetchall()}
 
     # Fetch quantities for each item
-    cur.execute("SELECT Item_ID, SUM(Quantity) as TotalQuantity FROM Inventory GROUP BY Item_ID")
+    cur.execute("SELECT Item_ID, SUM(Quantity) as"
+                " TotalQuantity FROM Inventory GROUP BY Item_ID")
     quantities = {row[0]: row[1] for row in cur.fetchall()}
 
     conn.close()
@@ -140,27 +149,11 @@ def get_items():
 @app.route('/')
 def main_page():
     items,quantities=get_items()
-    return render_template('index.html', items=items, quantities=quantities)
+    item_ids = list(items.keys())
+    return render_template('index.html', items=items, quantities=quantities, item_ids=item_ids)
 if __name__ == '__main__':
     #start_scheduler()
     app.run(debug=True)
 
-
-# ... (Your existing code for scheduling expiration updates)
-
-#
-#
-# # ... (rest of your imports and update_expiration_dates function)
-#
-# def start_scheduler():
-#     scheduler = BackgroundScheduler()
-#     scheduler.add_job(func=update_expiration_dates, trigger="interval", days=1)
-#     scheduler.start()
-#
-# # ... (rest of your app.py)
-#
-# if __name__ == '__main__':
-#     start_scheduler()
-#     app.run()
 
 
