@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<!--
+	Multiverse by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<body>
+
+{#      //cheeto#}
+      <div style="left: 119px; top: 227px; position: absolute; flex-direction: column; justify-content: flex-end; align-items: center; gap: 22px; display: inline-flex">
+          <img style="width: 238px; height: 262px" src="{{ url_for('static', filename='../static/imagesnew/thumbs/cheeto.png') }}" />
+          <div style="width: 96px; height: 46px; color: black; font-size: 18px; font-family: Newsreader; font-weight: 500; line-height: 18px; word-wrap: break-word">${{ "%.2f"|format(items.get(1, 'N/A')) }}</div>
+    <div>Available: {{ quantities.get(1, 'Out of Stock') }}</div>
+      </div>
+{#        //hot cheeto#}
+      <div style="left: 432px; top: 227px; position: absolute; flex-direction: column; justify-content: flex-end; align-items: center; gap: 21px; display: inline-flex">
+          <img style="width: 238px; height: 262px" src="{{ url_for('static', filename='../static/imagesnew/thumbs/hotcheetos.jpg') }}" />
+          <div style="width: 96px; height: 46px; color: black; font-size: 18px; font-family: Newsreader; font-weight: 500; line-height: 18px; word-wrap: break-word">${{ "%.2f"|format(items.get(2, 'N/A')) }}</div>
+    <div>Available: {{ quantities.get(2, 'Out of Stock') }}</div>
+      </div>
+{#      //doritos#}
+      <div style="left: 745px; top: 227px; position: absolute; flex-direction: column; justify-content: flex-end; align-items: center; gap: 23px; display: inline-flex">
+          <img style="width: 238px; height: 262px" src="{{ url_for('static', filename='../static/imagesnew/thumbs/doritos.png') }}" />
+          <div style="width: 96px; height: 46px; color: black; font-size: 18px; font-family: Newsreader; font-weight: 500; line-height: 18px; word-wrap: break-word">${{ "%.2f"|format(items.get(3, 'N/A')) }}</div>
+    <div>Available: {{ quantities.get(3, 'Out of Stock') }}</div>
+      </div>
+{#      //funyuns#}
+      <div style="left: 1058px; top: 227px; position: absolute; flex-direction: column; justify-content: flex-end; align-items: center; gap: 18px; display: inline-flex">
+          <img style="width: 238px; height: 262px" src="{{ url_for('static', filename='../static/imagesnew/thumbs/funyuns.png') }}" />
+          <div style="width: 96px; height: 46px; color: black; font-size: 18px; font-family: Newsreader; font-weight: 500; line-height: 18px; word-wrap: break-word">${{ "%.2f"|format(items.get(4, 'N/A')) }}</div>
+    <div>Available: {{ quantities.get(4, 'Out of Stock') }}</div>
+      </div>
+{#      //reeses#}
+      <div style="left: 119px; top: 578px; position: absolute; flex-direction: column; justify-content: flex-end; align-items: center; gap: 22px; display: inline-flex">
+          <img style="width: 238px; height: 262px" src="{{ url_for('static', filename='../static/imagesnew/thumbs/reeses.png') }}" />
+          <div style="width: 96px; height: 46px; color: black; font-size: 18px; font-family: Newsreader; font-weight: 500; line-height: 18px; word-wrap: break-word">${{ "%.2f"|format(items.get(5, 'N/A')) }}</div>
+    <div>Available: {{ quantities.get(5, 'Out of Stock') }}</div>
+      </div>
+{#       //snickers#}
+      <div style="left: 432px; top: 578px; position: absolute; flex-direction: column; justify-content: flex-end; align-items: center; gap: 23px; display: inline-flex">
+          <img style="width: 238px; height: 262px" src="{{ url_for('static', filename='../static/imagesnew/thumbs/snickers.png') }}" />
+          <div style="width: 96px; height: 46px; color: black; font-size: 18px; font-family: Newsreader; font-weight: 500; line-height: 18px; word-wrap: break-word">${{ "%.2f"|format(items.get(6, 'N/A')) }}</div>
+    <div>Available: {{ quantities.get(6, 'Out of Stock') }}</div>
+      </div>
+{#      //M&M's#}
+      <div style="left: 745px; top: 578px; position: absolute; flex-direction: column; justify-content: flex-end; align-items: center; gap: 22px; display: inline-flex">
+          <img style="width: 238px; height: 262px" src="{{ url_for('static', filename='../static/imagesnew/thumbs/mm.png') }}"/>
+          <div style="width: 96px; height: 46px; color: black; font-size: 18px; font-family: Newsreader; font-weight: 500; line-height: 18px; word-wrap: break-word">${{ "%.2f"|format(items.get(7, 'N/A')) }}</div>
+    <div>Available: {{ quantities.get(7, 'Out of Stock') }}</div>
+      </div>
+
+{#      //Oreo#}
+      <div style="left: 1058px; top: 578px; position: absolute; flex-direction: column; justify-content: flex-end; align-items: center; gap: 18px; display: inline-flex">
+          <img style="width: 238px; height: 262px" src="{{ url_for('static', filename='../static/imagesnew/thumbs/oreo.png') }}" />
+          <div style="width: 96px; height: 46px; color: black; font-size: 18px; font-family: Newsreader; font-weight: 500; line-height: 18px; word-wrap: break-word">${{ "%.2f"|format(items.get(8, 'N/A')) }}</div>
+    <div>Available: {{ quantities.get(8, 'Out of Stock') }}</div>
+      </div>
+{#      // Chips Ahoy#}
+      <div style="left: 119px; top: 929px; position: absolute; flex-direction: column; justify-content: flex-end; align-items: center; gap: 21px; display: inline-flex">
+          <img style="width: 238px; height: 262px" src="{{ url_for('static', filename='../static/imagesnew/thumbs/chips_ahoy.png') }}"/>
+          <div style="width: 96px; height: 46px; color: black; font-size: 18px; font-family: Newsreader; font-weight: 500; line-height: 18px; word-wrap: break-word">${{ "%.2f"|format(items.get(9, 'N/A')) }}</div>
+    <div>Available: {{ quantities.get(9, 'Out of Stock') }}</div>
+      </div>
+{#       //Nature Valley#}
+      <div style=" left: 432px; top: 929px; position: absolute; flex-direction: column; justify-content: flex-end; align-items: center; gap: 21px; display: inline-flex">
+          <img style="width: 238px; height: 262px" src="{{ url_for('static', filename='../static/imagesnew/thumbs/nature_valley.png') }}" />
+          <div style="width: 96px; height: 46px; color: black; font-size: 18px; font-family: Newsreader; font-weight: 500; line-height: 18px; word-wrap: break-word">${{ "%.2f"|format(items.get(10, 'N/A')) }}</div>
+    <div>Available: {{ quantities.get(10, 'Out of Stock') }}</div>
+
+      </div>
+
+{#      //Gold Fish#}
+      <div style="left: 745px; top: 929px; position: absolute; flex-direction: column; justify-content: flex-end; align-items: center; gap: 18px; display: inline-flex">
+          <img style="width: 238px; height: 262px" src="{{ url_for('static', filename='../static/imagesnew/thumbs/goldfish.png') }}" />
+          <div style="width: 96px; height: 46px; color: black; font-size: 18px; font-family: Newsreader; font-weight: 500; line-height: 18px; word-wrap: break-word">${{ "%.2f"|format(items.get(11, 'N/A')) }}</div>
+    <div>Available: {{ quantities.get(11, 'Out of Stock') }}</div>
+      </div>
+{#      //Beef Jerky#}
+      <div style="left: 1058px; top: 929px; position: absolute; flex-direction: column; justify-content: flex-end; align-items: center; gap: 18px; display: inline-flex">
+          <img style="width: 238px; height: 262px" src="{{ url_for('static', filename='../static/imagesnew/thumbs/beef_jerky.png') }}" />
+          <div style="width: 96px; height: 46px; color: black; font-size: 18px; font-family: Newsreader; font-weight: 500; line-height: 18px; word-wrap: break-word">${{ "%.2f"|format(items.get(12, 'N/A')) }}</div>
+    <div>Available: {{ quantities.get(12, 'Out of Stock') }}</div>
+      </div>
+
+      <div style="width: 1440px; height: 112px; left: 16px; top: 59px; position: absolute">
+          <div style="left: 96px; top: 41px; position: absolute; color: #426B1F; font-size: 18px; font-family: Newsreader; font-weight: 500; line-height: 18px; word-wrap: break-word">Vending Machine</div>
+          <div style="left: 741px; top: 45.50px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Inter; font-weight: 700; line-height: 20.80px; word-wrap: break-word">Menu</div>
+          <div style="left: 911px; top: 46px; position: absolute; text-align: center; color: black; font-size: 16px; font-family: Inter; font-weight: 400; line-height: 20.80px; word-wrap: break-word">Cart Checkout</div>
+          <div style="width: 126px; height: 48px; left: 1218px; top: 18px; position: absolute; background: #426B1F; border-radius: 8px; overflow: hidden">
+              <div style="left: 18px; top: 13.50px; position: absolute; text-align: center; color: white; font-size: 16px; font-family: Inter; font-weight: 600; line-height: 20.80px; word-wrap: break-word">Cart (0)</div>
+              <div style="padding-top: 13.50px; padding-bottom: 13.50px; padding-left: 33px; padding-right: 18px; left: 0px; top: 0px; position: absolute; background: #426B1F; border-radius: 4px; overflow: hidden; justify-content: center; align-items: center; display: inline-flex">
+                  <div style="text-align: center; color: white; font-size: 16px; font-family: Inter; font-weight: 600; line-height: 20.80px; word-wrap: break-word">Cart (3)</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+  <script src="../static/assets/js/jquery.min.js"></script>
+  <script src="../static/assets/js/jquery.poptrox.min.js"></script>
+  <script src="../static/assets/js/browser.min.js"></script>
+  <script src="../static/assets/js/breakpoints.min.js"></script>
+  <script src="../static/assets/js/util.js"></script>
+  <script src="../static/assets/js/main.js"></script>
+
+
+</body>
+</html>
