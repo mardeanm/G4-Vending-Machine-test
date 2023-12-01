@@ -22,6 +22,8 @@ import DB_updater
 app = Flask(__name__)
 
 VM_ID=1
+items={}
+quantities={}
 
 class Cart:
     def __init__(self):
@@ -30,13 +32,15 @@ class Cart:
         self.cart_count=0
 
     def add_item(self, item_id, quantity, name, price):
-        # Add or update an item in the cart
         if item_id in self.items:
             self.items[item_id]['quantity'] += quantity
-            self.cart_count += quantity
         else:
             self.items[item_id] = {'quantity': quantity, 'name': name, 'price': price}
-            self.cart_count+=quantity
+
+        self.cart_count += quantity
+        # Update quantities dictionary
+        if item_id in quantities:
+            quantities[item_id] -= quantity
 
     def calculate_total(self):
         # Calculate the total cost of items in the cart
@@ -52,12 +56,28 @@ class Cart:
         except sqlite3.Error as e:
             return False, str(e)
 
+    def get_items(self):
+        global items, quantities  # Use global variables
+        conn = sqlite3.connect('vending_machines_DB.sqlite.db')
+        cur = conn.cursor()
+        # Fetch item details including names
+        cur.execute("SELECT Item_ID, Item_Name, Price FROM Items")
+        items = {item[0]: {'name': item[1], 'price': item[2]} for item in cur.fetchall()}
+
+        # Fetch quantities for each item
+        cur.execute("SELECT Item_ID, SUM(Quantity) as"
+                    " TotalQuantity FROM Inventory GROUP BY Item_ID")
+        quantities = {row[0]: row[1] for row in cur.fetchall()}
+
+        conn.close()
+        return items, quantities
     def clear_cart(self):
         # Clear all items in the cart
         self.items.clear()
         self.cart_count=0
-
-
+        self.get_items()
+# Initialize the cart
+cart = Cart()
 def decrease_inventory(item_id, quantity):
     # Decrease the inventory quantity after dispensing an item
     conn = sqlite3.connect('vending_machines_DB.sqlite.db')
@@ -78,9 +98,13 @@ def add_to_cart():
 
     cart.add_item(item_id, quantity, name, price)
     return jsonify(success=True)
+@app.route('/item_quantity/<int:item_id>')
+def get_item_quantity(item_id):
+    global quantities
+    quantity = quantities.get(item_id, 0)
+    return jsonify(quantity=quantity)
 @app.route('/cart_count')
 def get_cart_count():
-    # Assuming `cart` is your global Cart instance
     return jsonify(cart_count=cart.cart_count)
 @app.route('/pay_with_cash', methods=['POST'])
 def pay_with_cash():
@@ -126,29 +150,14 @@ def start_scheduler():
     scheduler.add_job(func=DB_updater.transfer_data(vm_id=VM_ID), trigger="interval",  hours=12)
     scheduler.start()
 
-# Initialize the cart
-cart = Cart()
 
 
-def get_items():
-    conn = sqlite3.connect('vending_machines_DB.sqlite.db')
-    cur = conn.cursor()
 
-    # Fetch item details including names
-    cur.execute("SELECT Item_ID, Item_Name, Price FROM Items")
-    items = {item[0]: {'name': item[1], 'price': item[2]} for item in cur.fetchall()}
 
-    # Fetch quantities for each item
-    cur.execute("SELECT Item_ID, SUM(Quantity) as"
-                " TotalQuantity FROM Inventory GROUP BY Item_ID")
-    quantities = {row[0]: row[1] for row in cur.fetchall()}
-
-    conn.close()
-    return items, quantities
 
 @app.route('/')
 def main_page():
-    items,quantities=get_items()
+    items,quantities=cart.get_items()
     item_ids = list(items.keys())
     return render_template('index.html', items=items, quantities=quantities, item_ids=item_ids)
 if __name__ == '__main__':
