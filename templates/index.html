@@ -166,9 +166,8 @@
                   <h5>
                     {{ items[1]['name'].strip('"') }}
                   </h5>
-                  <p>
-                    Available: {{ quantities.get(1, 'Out of Stock') }}
-                  </p>
+                  <div id="quantity-{{ 1 }}">Available: {{ quantities.get(1, 'Out of Stock') }}</div>
+
                   <div class="options">
                     <h6>
                    ${{ "%.2f"|format(items.get(1, {}).get('price', 'N/A')) }}
@@ -192,66 +191,13 @@
                   <h5>
                     {{ items[2]['name'].strip('"') }}
                   </h5>
-                  <p>
-                    Available: {{ quantities.get(2, 'Out of Stock') }}
-                  </p>
+                  <div id="quantity-{{ 2 }}">Available: {{ quantities.get(2, 'Out of Stock') }}</div>
                   <div class="options">
                     <h6>
                    ${{ "%.2f"|format(items.get(2, {}).get('price', 'N/A')) }}
                     </h6>
-                    <a href="">
-                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                        <g>
-                          <g>
-                            <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                         c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                         C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                         c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                         C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                         c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                          </g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                      </svg>
+                   <a href="#" class="add-to-cart" data-item-id="{{ 2}}" data-item-name="{{ items[2]['name'] }}" data-item-price="{{ items[2]['price'] }}">
+                        <i class="fas fa-shopping-cart"></i>
                     </a>
                   </div>
                 </div>
@@ -269,66 +215,13 @@
                   <h5>
                     {{ items[3]['name'].strip('"') }}
                   </h5>
-                  <p>
-                    Available: {{ quantities.get(3, 'Out of Stock') }}
-                  </p>
+                  <div id="quantity-{{ 3 }}">Available: {{ quantities.get(3, 'Out of Stock') }}</div>
                   <div class="options">
                     <h6>
                    ${{ "%.2f"|format(items.get(3, {}).get('price', 'N/A')) }}
                     </h6>
-                    <a href="">
-                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                        <g>
-                          <g>
-                            <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                         c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                         C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                         c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                         C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                         c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                          </g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                      </svg>
+                   <a href="#" class="add-to-cart" data-item-id="{{ 3}}" data-item-name="{{ items[3]['name'] }}" data-item-price="{{ items[3]['price'] }}">
+                        <i class="fas fa-shopping-cart"></i>
                     </a>
                   </div>
                 </div>
@@ -343,69 +236,13 @@
                   <img src="../static/images/thumbs/funyuns.png" alt="">
                 </div>
                 <div class="detail-box">
-                  <h5>
-                    {{ items[4]['name'].strip('"') }}
-                  </h5>
-                  <p>
-                    Available: {{ quantities.get(4, 'Out of Stock') }}
-                  </p>
+                  <div id="quantity-{{ 4 }}">Available: {{ quantities.get(4, 'Out of Stock') }}</div>
                   <div class="options">
                     <h6>
                    ${{ "%.2f"|format(items.get(4, {}).get('price', 'N/A')) }}
                     </h6>
-                    <a href="">
-                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                        <g>
-                          <g>
-                            <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                         c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                         C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                         c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                         C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                         c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                          </g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                      </svg>
+                   <a href="#" class="add-to-cart" data-item-id="{{ 4}}" data-item-name="{{ items[4]['name'] }}" data-item-price="{{ items[4]['price'] }}">
+                        <i class="fas fa-shopping-cart"></i>
                     </a>
                   </div>
                 </div>
@@ -423,66 +260,13 @@
                   <h5>
                     {{ items[5]['name'].strip('"') }}
                   </h5>
-                  <p>
-                    Available: {{ quantities.get(5, 'Out of Stock') }}
-                  </p>
+                  <div id="quantity-{{ 5 }}">Available: {{ quantities.get(5, 'Out of Stock') }}</div>
                   <div class="options">
                     <h6>
                    ${{ "%.2f"|format(items.get(5, {}).get('price', 'N/A')) }}
                     </h6>
-                    <a href="">
-                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                        <g>
-                          <g>
-                            <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                         c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                         C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                         c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                         C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                         c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                          </g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                      </svg>
+                   <a href="#" class="add-to-cart" data-item-id="{{ 5}}" data-item-name="{{ items[5]['name'] }}" data-item-price="{{ items[5]['price'] }}">
+                        <i class="fas fa-shopping-cart"></i>
                     </a>
                   </div>
                 </div>
@@ -500,66 +284,13 @@
                   <h5>
                     {{ items[6]['name'].strip('"') }}
                   </h5>
-                  <p>
-                    Available: {{ quantities.get(6, 'Out of Stock') }}
-                  </p>
+                  <div id="quantity-{{ 6 }}">Available: {{ quantities.get(6, 'Out of Stock') }}</div>
                   <div class="options">
                     <h6>
                    ${{ "%.2f"|format(items.get(6, {}).get('price', 'N/A')) }}
                     </h6>
-                    <a href="">
-                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                        <g>
-                          <g>
-                            <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                         c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                         C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                         c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                         C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                         c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                          </g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                      </svg>
+                   <a href="#" class="add-to-cart" data-item-id="{{ 6}}" data-item-name="{{ items[6]['name'] }}" data-item-price="{{ items[6]['price'] }}">
+                        <i class="fas fa-shopping-cart"></i>
                     </a>
                   </div>
                 </div>
@@ -577,66 +308,13 @@
                   <h5>
                     {{ items[7]['name'].strip('"') }}
                   </h5>
-                  <p>
-                    Available: {{ quantities.get(7, 'Out of Stock') }}
-                  </p>
+                  <div id="quantity-{{ 7 }}">Available: {{ quantities.get(7, 'Out of Stock') }}</div>
                   <div class="options">
                     <h6>
                    ${{ "%.2f"|format(items.get(7, {}).get('price', 'N/A')) }}
                     </h6>
-                    <a href="">
-                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                        <g>
-                          <g>
-                            <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                         c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                         C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                         c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                         C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                         c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                          </g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                      </svg>
+                   <a href="#" class="add-to-cart" data-item-id="{{ 7}}" data-item-name="{{ items[7]['name'] }}" data-item-price="{{ items[7]['price'] }}">
+                        <i class="fas fa-shopping-cart"></i>
                     </a>
                   </div>
                 </div>
@@ -654,66 +332,13 @@
                   <h5>
                     {{ items[8]['name'].strip('"') }}
                   </h5>
-                  <p>
-                    Available: {{ quantities.get(8, 'Out of Stock') }}
-                  </p>
+                  <div id="quantity-{{ 8 }}">Available: {{ quantities.get(8, 'Out of Stock') }}</div>
                   <div class="options">
                     <h6>
                    ${{ "%.2f"|format(items.get(8, {}).get('price', 'N/A')) }}
                     </h6>
-                    <a href="">
-                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                        <g>
-                          <g>
-                            <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                         c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                         C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                         c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                         C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                         c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                          </g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                      </svg>
+                   <a href="#" class="add-to-cart" data-item-id="{{ 8}}" data-item-name="{{ items[8]['name'] }}" data-item-price="{{ items[8]['price'] }}">
+                        <i class="fas fa-shopping-cart"></i>
                     </a>
                   </div>
                 </div>
@@ -731,66 +356,13 @@
                   <h5>
                     {{ items[9]['name'].strip('"') }}
                   </h5>
-                  <p>
-                    Available: {{ quantities.get(9, 'Out of Stock') }}
-                  </p>
+                 <div id="quantity-{{ 9 }}">Available: {{ quantities.get(9, 'Out of Stock') }}</div>
                   <div class="options">
                     <h6>
                    ${{ "%.2f"|format(items.get(9, {}).get('price', 'N/A')) }}
                     </h6>
-                    <a href="">
-                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                        <g>
-                          <g>
-                            <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                         c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                         C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                         c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                         C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                         c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                          </g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                      </svg>
+                   <a href="#" class="add-to-cart" data-item-id="{{ 9}}" data-item-name="{{ items[9]['name'] }}" data-item-price="{{ items[9]['price'] }}">
+                        <i class="fas fa-shopping-cart"></i>
                     </a>
                   </div>
                 </div>
@@ -808,66 +380,13 @@
                   <h5>
                     {{ items[10]['name'].strip('"') }}
                   </h5>
-                  <p>
-                    Available: {{ quantities.get(10, 'Out of Stock') }}
-                  </p>
+                  <div id="quantity-{{ 10 }}">Available: {{ quantities.get(10, 'Out of Stock') }}</div>
                   <div class="options">
                     <h6>
                    ${{ "%.2f"|format(items.get(10, {}).get('price', 'N/A')) }}
                     </h6>
-                    <a href="">
-                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                        <g>
-                          <g>
-                            <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                         c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                         C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                         c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                         C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                         c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                          </g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                      </svg>
+                   <a href="#" class="add-to-cart" data-item-id="{{ 10}}" data-item-name="{{ items[10]['name'] }}" data-item-price="{{ items[10]['price'] }}">
+                        <i class="fas fa-shopping-cart"></i>
                     </a>
                   </div>
                 </div>
@@ -885,66 +404,13 @@
                   <h5>
                     {{ items[11]['name'].strip('"') }}
                   </h5>
-                  <p>
-                    Available: {{ quantities.get(11, 'Out of Stock') }}
-                  </p>
+                  <div id="quantity-{{ 11 }}">Available: {{ quantities.get(11, 'Out of Stock') }}</div>
                   <div class="options">
                     <h6>
                    ${{ "%.2f"|format(items.get(11, {}).get('price', 'N/A')) }}
                     </h6>
-                    <a href="">
-                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                        <g>
-                          <g>
-                            <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                         c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                         C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                         c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                         C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                         c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                          </g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                      </svg>
+                   <a href="#" class="add-to-cart" data-item-id="{{ 11}}" data-item-name="{{ items[11]['name'] }}" data-item-price="{{ items[11]['price'] }}">
+                        <i class="fas fa-shopping-cart"></i>
                     </a>
                   </div>
                 </div>
@@ -962,66 +428,13 @@
                   <h5>
                     {{ items[12]['name'].strip('"') }}
                   </h5>
-                  <p>
-                    Available: {{ quantities.get(12, 'Out of Stock') }}
-                  </p>
+                  <div id="quantity-{{ 12 }}">Available: {{ quantities.get(12, 'Out of Stock') }}</div>
                   <div class="options">
                     <h6>
                    ${{ "%.2f"|format(items.get(12, {}).get('price', 'N/A')) }}
                     </h6>
-                    <a href="">
-                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                        <g>
-                          <g>
-                            <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                         c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                         C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                         c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                         C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                          </g>
-                        </g>
-                        <g>
-                          <g>
-                            <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                         c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                          </g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                        <g>
-                        </g>
-                      </svg>
+                   <a href="#" class="add-to-cart" data-item-id="{{ 12}}" data-item-name="{{ items[12]['name'] }}" data-item-price="{{ items[12]['price'] }}">
+                        <i class="fas fa-shopping-cart"></i>
                     </a>
                   </div>
                 </div>
@@ -1050,52 +463,80 @@
   <!-- custom js -->
   <script src="../static/assets/js/custom.js"></script>
   <!-- Google Map -->
-{#  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">#}
-  </script>
+
   <!-- End Google Map -->
+
 <script>
+     var itemIds = {{ item_ids | tojson | safe }};
+     console.log(itemIds);
 document.addEventListener('DOMContentLoaded', function() {
     var addToCartButtons = document.querySelectorAll('.add-to-cart');
-
     addToCartButtons.forEach(function(button) {
         button.addEventListener('click', function(event) {
             event.preventDefault();
             var itemId = this.getAttribute('data-item-id');
             var itemName = this.getAttribute('data-item-name');
             var itemPrice = parseFloat(this.getAttribute('data-item-price'));
-
             addToCart(itemId, itemName, itemPrice);
         });
     });
-    function updateCartCount() {
-    fetch('/cart_count')
+
+    updateCartCount();
+    // Assuming you have a list of item IDs
+    itemIds.forEach(id => updateItemQuantity(id));
+});
+
+function updateItemQuantity(item_id) {
+    fetch(`/item_quantity/${item_id}?_=${new Date().getTime()}`)  // Adding a timestamp to prevent caching
         .then(response => response.json())
         .then(data => {
-            document.getElementById('cart-count').textContent = data.cart_count;
+            console.log('Updated data for item', item_id, ':', data);  // Debugging
+            const quantityElement = document.getElementById(`quantity-${item_id}`);
+            quantityElement.textContent = `Available: ${data.quantity > 0 ? data.quantity : 'Out of Stock'}`;
+
+            const addToCartButton = document.getElementById(`add-to-cart-${item_id}`);
+            if (data.quantity <= 0) {
+                addToCartButton.style.display = 'none';
+            } else {
+                addToCartButton.style.display = 'block';
+            }
         })
         .catch(error => console.error('Error:', error));
 }
-    function addToCart(itemId, itemName, itemPrice) {
-        fetch('/add_to_cart', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ item_id: itemId, quantity: 1, name: itemName, price: itemPrice }),
-        })
+
+function updateCartCount() {
+    fetch('/cart_count')
         .then(response => response.json())
         .then(data => {
-            if(data.success) {
-               updateCartCount();
-            } else {
-                alert("Failed to add item to cart");
-            }
+            const cartCountElement = document.getElementById('cart-count');
+            cartCountElement.textContent = data.cart_count;
         })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
-    }
-});
+        .catch(error => console.error('Error:', error));
+}
+
+function addToCart(itemId, itemName, itemPrice) {
+    fetch('/add_to_cart', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ item_id: itemId, quantity: 1, name: itemName, price: itemPrice }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if(data.success) {
+            updateCartCount();
+            updateItemQuantity(itemId);
+        } else {
+            alert("Failed to add item to cart");
+        }
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+}
+
+
 </script>
 </body>
 
